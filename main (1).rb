@@ -22,7 +22,7 @@ possibilidades = {
 }
 
 #recebe como parametro a cidade origem, cidade destino e as possivilidades de conexao
-def buscar_caminho(origem, destino, possibilidades)
+def procurar(origem, destino, possibilidades)
     visitados = [origem] #lista origem
     fila = [origem]#fila origem
     parentes = {} #armazenar o nó pai
@@ -49,6 +49,6 @@ end
 origem = 'Arad' # --> a cidade de origem (ponto de partida)
 destino = 'Bucharest' # --> a cidade final (objetivo)
 
-caminho = buscar_caminho(origem, destino, possibilidades) #se encontra 
+caminho = procurar(origem, destino, possibilidades) #se encontra 
 puts "O caminho mais rápido entre #{origem} e #{destino} é >
 #{caminho.join(' --> ')}."
