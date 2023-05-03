@@ -46,8 +46,8 @@ def procurar(origem, destino, possibilidades)
     return nil #n econtra o caminho retorna
 end
 
-origem = 'Arad' # --> a cidade de origem (ponto de partida)
-destino = 'Bucharest' # --> a cidade final (objetivo)
+origem = 'Arad' #cidade de origem 
+destino = 'Bucharest' # cidade de chegada
 
 caminho = procurar(origem, destino, possibilidades) #se encontra 
 puts "O caminho mais rápido entre #{origem} e #{destino} é >
