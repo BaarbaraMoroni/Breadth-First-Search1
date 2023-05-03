@@ -52,5 +52,5 @@ origem = 'Hirsova' #cidade de origem
 destino = 'Rimnicu Vilcea' # cidade de chegada
 
 caminho = procurar(origem, destino, possibilidades) #se encontra 
-puts "O caminho mais rápido entre #{origem} e #{destino} é >
-#{caminho.join(' --> ')}."
+puts "O caminho mais rápido entre #{origem} e #{destino} é 
+#{caminho.join(' - ')}."
