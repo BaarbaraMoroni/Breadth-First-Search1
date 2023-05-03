@@ -21,7 +21,7 @@ possibilidades = {
     'Vaslui' => ['Urziceni', 'Iasi']
 }
 
-#recebe como parametro a cidade origem, cidade destino e as possivilidades de conexao
+#recebe como parametro a cidade origem, cidade destino e as possibilidades de conexao
 def procurar(origem, destino, possibilidades)
     visitados = [origem] #lista origem
     fila = [origem]#fila origem
