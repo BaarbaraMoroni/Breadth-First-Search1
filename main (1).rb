@@ -1,4 +1,4 @@
-possibilidades = { 
+cidades = { 
     'Sibiu' => ['Oradea', 'Arad', 'Fagaras', 'Rimnicu Vilcea'],
     'Oradea' => ['Zerind', 'Sibiu'],
     'Neamt' => ['Iasi'],
@@ -24,7 +24,7 @@ possibilidades = {
 }
 
 #recebe como parametro a cidade origem, cidade destino e as possibilidades de conexao
-def procurar(origem, destino, possibilidades)
+def procurar(origem, destino, cidades)
     visitados = [origem] #lista origem
     fila = [origem]#fila origem
     parentes = {} #armazenar o nó pai
@@ -38,7 +38,7 @@ def procurar(origem, destino, possibilidades)
             end
             return caminho # retorna caminho encontrado
         end
-        possibilidades[no].select {|vizinho| !visitados.include?(vizinho)} #selecao vizinhos
+        cidades[no].select {|vizinho| !visitados.include?(vizinho)} #selecao vizinhos
                           .each do |vizinho|
             visitados.push(vizinho) #add vizinho
             fila.push(vizinho)
@@ -51,6 +51,6 @@ end
 origem = 'Hirsova' #cidade de origem 
 destino = 'Rimnicu Vilcea' # cidade de chegada
 
-caminho = procurar(origem, destino, possibilidades) #se encontra 
+caminho = procurar(origem, destino, cidades) #se encontra 
 puts "O caminho mais rápido entre #{origem} e #{destino} é 
 #{caminho.join(' - ')}."
