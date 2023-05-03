@@ -1,15 +1,10 @@
 possibilidades = { 
-    'Arad' => ['Zerind', 'Sibiu', 'Timisoara'],
-    'Pitesti' => ['Rimnicu Vilcea', 'Craiova', 'Bucharest'],
-    'Urziceni' => ['Bucharest', 'Hirsova', 'Vaslui'],
-    'Eforie' => ['Hirsova'],
-    'Lugoj' => ['Timisoara', 'Mehadia'],
+    'Sibiu' => ['Oradea', 'Arad', 'Fagaras', 'Rimnicu Vilcea'],
     'Oradea' => ['Zerind', 'Sibiu'],
     'Neamt' => ['Iasi'],
     'Bucharest' => ['Fagaras', 'Pitesti', 'Giurgiu', 'Urziceni'],
     'Giurgiu' => ['Bucharest'],
     'Zerind' => ['Oradea', 'Arad'],
-    'Sibiu' => ['Oradea', 'Arad', 'Fagaras', 'Rimnicu Vilcea'],
     'Mehadia' => ['Lugoj', 'Dobreta'],
     'Iasi' => ['Vaslui', 'Neamt'],
     'Fagaras' => ['Sibiu', 'Bucharest'],
@@ -19,6 +14,13 @@ possibilidades = {
     'Hirsova' => ['Urziceni', 'Eforie'],
     'Craiova' => ['Dobreta', 'Rimnicu Vilcea', 'Pitesti'],
     'Vaslui' => ['Urziceni', 'Iasi']
+    'Arad' => ['Zerind', 'Sibiu', 'Timisoara'],
+    'Pitesti' => ['Rimnicu Vilcea', 'Craiova', 'Bucharest'],
+    'Urziceni' => ['Bucharest', 'Hirsova', 'Vaslui'],
+    'Eforie' => ['Hirsova'],
+    'Lugoj' => ['Timisoara', 'Mehadia']
+   
+    
 }
 
 #recebe como parametro a cidade origem, cidade destino e as possibilidades de conexao
@@ -32,7 +34,7 @@ def procurar(origem, destino, possibilidades)
         if no == destino
             caminho = [no] #lista que armazena o caminho
             while caminho[0] != origem
-                caminho.unshift(parentes[caminho[0]])
+                caminho.unshift(parentes[caminho[0]]) # construir o caminho do fim para o começo
             end
             return caminho # retorna caminho encontrado
         end
